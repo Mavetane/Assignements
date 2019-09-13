@@ -1,0 +1,71 @@
+.App {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.Hints {
+  margin-left: -1300px;
+  margin-top: -150px;
+  height: 10vh;
+  padding-right: 100px;
+  border: thick black;
+  background-color: darkgray;
+}
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.Output{
+  margin-top: 50px;
+  padding-bottom: 100px;
+  background-color: lightgrey;
+  border: 10px inset;
+  height: 78vh;
+}
+
+.Input{
+  width: 1000px;
+  height: 20vh;
+  border-style: solid; 
+  border: inset;
+  font-family: 'Roboto Slab', serif;
+
+}
+
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.H3{
+  font-family: 'Chau Philomene One', sans-serif;
+  font-size: 40px;
+
+}
+
+.H2{
+  font-family: 'Amarante', cursive;
+  font-size: 40px;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
