@@ -39,9 +39,9 @@ class App extends Component {
       <div className="App container">
         <div>
           <FormGroup controlId="formControlsTextarea">
-            <h3 className="H3">Markdown Input</h3>
+            <h3 className="H3"><strong>Markdown Input</strong></h3>
             <br />
-            <textarea className="Input" rows={this.state.rows} onKeyPress={(event) => this.keyPressed(event)} placeholder="Enter text"
+            <textarea className="Input" rows={this.state.rows} onKeyPress={(event) => this.keyPressed(event)} placeholder="Your-text-here"
               value={markdown} onChange={(event) => this.updateMarkdown(event.target.value)}></textarea>
           </FormGroup>
         </div>
