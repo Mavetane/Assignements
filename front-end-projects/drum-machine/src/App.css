@@ -1,0 +1,17 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+.App-header {
+ margin-top: 50px;
+ font-size: 50px;
+ font-weight: 30px;
+}
+
+.App-link {
+  color: #09d3ac;
+}

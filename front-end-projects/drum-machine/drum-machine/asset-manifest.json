@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/Mavetane.github.io/Assignments/react/drum-machine/static/css/main.5e00f448.chunk.css",
+    "main.js": "/Mavetane.github.io/Assignments/react/drum-machine/static/js/main.a4b597d2.chunk.js",
+    "main.js.map": "/Mavetane.github.io/Assignments/react/drum-machine/static/js/main.a4b597d2.chunk.js.map",
+    "runtime-main.js": "/Mavetane.github.io/Assignments/react/drum-machine/static/js/runtime-main.781bc915.js",
+    "runtime-main.js.map": "/Mavetane.github.io/Assignments/react/drum-machine/static/js/runtime-main.781bc915.js.map",
+    "static/js/2.25be781b.chunk.js": "/Mavetane.github.io/Assignments/react/drum-machine/static/js/2.25be781b.chunk.js",
+    "static/js/2.25be781b.chunk.js.map": "/Mavetane.github.io/Assignments/react/drum-machine/static/js/2.25be781b.chunk.js.map",
+    "index.html": "/Mavetane.github.io/Assignments/react/drum-machine/index.html",
+    "precache-manifest.005b993c076b211b58e6031990f91b6c.js": "/Mavetane.github.io/Assignments/react/drum-machine/precache-manifest.005b993c076b211b58e6031990f91b6c.js",
+    "service-worker.js": "/Mavetane.github.io/Assignments/react/drum-machine/service-worker.js",
+    "static/css/main.5e00f448.chunk.css.map": "/Mavetane.github.io/Assignments/react/drum-machine/static/css/main.5e00f448.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.781bc915.js",
+    "static/js/2.25be781b.chunk.js",
+    "static/css/main.5e00f448.chunk.css",
+    "static/js/main.a4b597d2.chunk.js"
+  ]
+}
