@@ -1,0 +1,35 @@
+.App {
+  text-align: center;
+}
+.App-header {
+  background-color: rgba(35, 144, 245, 0.877);
+  text-decoration: none;
+  color: white;
+  border-radius: 100px;
+  margin: 150px 570px 0px 590px;
+  font-size: 40px;
+  height: 7vh;
+  padding-top: 19px;
+  font-family: 'Lobster', cursive;
+
+}
+.Components {
+  display: grid;
+  grid-template-columns: auto auto;
+  margin: 20px 100px 0px 600px;
+}
+.Session-App {
+  background-color: rgba(35, 144, 245, 0.877);
+  text-decoration: none;
+  color: white;
+  border-radius: 100px;
+  height: 60vh;
+  
+}
+.Break-App {
+  background-color: rgba(35, 144, 245, 0.877);
+  text-decoration: none;
+  color: white;
+  border-radius: 100px;
+  height: 30vh;
+}

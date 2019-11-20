@@ -1,0 +1,14 @@
+.Buttons > button {
+  background-color: rgba(35, 144, 245, 0.877);
+  text-decoration: none;
+  border: 3px solid white;
+  color: white;
+  font-size: 20px;
+  margin: 5px;
+}
+.H1 {
+  font-size: 40px;
+}
+.Session {
+  margin-top: 60px;
+}
