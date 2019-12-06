@@ -1,34 +1,216 @@
 .Header {
-  background-color: black;
-  text-decoration: none;
-  color: white;
-  text-align: center;
-  font-family: 'Bebas Neue', cursive;
-  font-weight: bold;
-  font-size: 40px;
-  height: 10vh;
-  padding-top: 20px;
+    background-color: black;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+    font-weight: bold;
+    font-size: 40px;
+    height: 15vh;
+    padding-top: 20px;
+}
+
+.Header>h1 {
+    margin-top: -7px;
+}
+
+.Nav-bar {
+    text-align: right;
+    font-size: 20px;
+}
+.Nav-bar>a:hover {
+    margin-top: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    color: rgb(10, 55, 65);
+    height: 10px;
+}
+
+.Nav-bar>a {
+    margin: 10px;
+    text-decoration: none;
+    color: white;
 }
 
 .Post-form {
-  text-align: center;
-  background-color: rgb(21, 129, 97);
-  height: 50vh;
-  padding-top: 20px;
-  text-decoration: none;
-  /* color: white; */
-  
-}
-.Posts {
-  text-align: center;
-  background-color: rgb(10, 55, 65);
-  text-decoration: none;
-  color: white;
-  padding-top: 30px;
-}
-.Posts-h1 {
-  font-family: 'Libre Baskerville', serif;
+    text-align: center;
+    height: 90vh;
+    padding-top: 20px;
+    text-decoration: none;
+    background-image: url("https://cdn.pixabay.com/photo/2019/11/07/17/07/universe-4609408_960_720.jpg");
+    background-size: cover;
 }
 .Post-form-h1 {
-  font-family: 'Libre Baskerville', serif;
+    color: white;
+    font-family: 'Libre Baskerville', serif;
+    
+}
+.Form>span {
+    color: white;
+    font-size: 30px;
+    margin-top: 5px;
+}
+.Name {
+    text-align: center;
+    margin-top: 2vh;
+}
+
+.Posts {
+    text-align: center;
+    background-color: rgb(10, 55, 65);
+    text-decoration: none;
+    color: white;
+    padding-top: 30px;
+}
+.Link {
+    color: white;
+}
+.Link:hover{
+    color: rgb(0, 60, 255);
+}
+.Log-in {
+    text-decoration: none;
+    color: white;
+}
+.Log-name {
+    text-align: left;
+}
+.Log-name>a {
+    margin: 5px 0px 0px 5px;
+    background-color:  rgb(10, 55, 65);
+}
+.Posts-h1 {
+    text-decoration: none;
+    font-family: 'Libre Baskerville', serif;
+    border-bottom: 2px solid rgb(21, 129, 97);
+    color: rgb(21, 129, 97);
+    font-weight: bold;
+
+}
+
+
+.Messages {
+    text-align: center;
+    background-color: rgb(21, 129, 97);
+    height: 45vh;
+}
+.Name>input{
+    border: 0;
+    border-bottom: 2px solid rgb(10, 55, 65);
+    width: 30vh;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+    background: transparent;
+}
+.Name>input.shake {
+    animation-name: shaker;
+    animation-duration: 200ms;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+}
+.Name>input:focus {
+    outline: 0;
+    color: rgb(10, 55, 65);
+}
+.Name>input::placeholder {
+    color: rgb(10, 55, 65);
+}
+.Message {
+    padding-top: -10vh;
+}
+.Message>textarea {
+    border: 0;
+    border-bottom: 2px solid rgb(10, 55, 65);
+    width: 50vh;
+    height: 15vh;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+    background: transparent;
+}
+.Message>textarea.shake {
+    animation-name: shaker;
+    animation-duration: 200ms;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+}
+.Message>textarea:focus {
+    outline: 0;
+    color:rgb(10, 55, 65);
+}
+.Message>textarea::placeholder {
+    color: rgb(10, 55, 65);
+}
+.Button {
+    margin-top: -10vh;
+    font-size: 20px;
+    width: 15vh;
+    height: auto;
+    background-color: rgb(10, 55, 65);
+    color: #00bfb6;
+    
+}
+.Post-container {
+    padding-top: -10px;
+}
+.Post-name {
+    font-family: 'Abril Fatface', cursive;
+    margin-left: 30vh;
+    border: 2px solid #00bfb6;
+    width: 26vh;
+    padding: 10px;
+    border-radius: 25px;
+    font-size: 30px;
+    line-height: 32px;
+    letter-spacing: 2px;
+    color: #fff;
+    top: 50px;
+    position: relative;
+    text-align: center;
+    height: 60px;
+    left: 91vh;
+    margin-top: -20px;
+}
+
+.Speech-bubble {
+    font-size: 30px;
+    font-variant: small-caps;
+    font-family: 'David Libre';
+    width: 60vh;
+    height: auto;
+    margin: 50px auto;
+    border: 4px solid #00bfb6;
+    padding: 20px;
+    text-align: center;
+    font-weight: 900;
+    color: #00bfb6;
+    font-family: arial;
+    position: relative;
+    left: -40px;
+}
+
+.Speech-bubble>label {
+    font-size: 10px;
+    text-align: right;
+}
+
+.Speech-bubble:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 10px solid #00bfb6;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #00bfb6;
+    border-bottom: 10px solid transparent;
+    right: -20px;
+    top: 6px;
+}
+.Form {
+    margin:20px 0px 0px 110vh;
+    background: rgb(204, 204, 204);
+    background: rgba(204, 204, 204, 0.5);
+    width: 38vh;
+    height: 30vh;
 }
