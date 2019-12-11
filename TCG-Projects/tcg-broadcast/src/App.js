@@ -13,9 +13,9 @@ function App() {
             <header className="Header" >
                 <h1 > TCG Broadcast </h1>
                 <div className="Nav-bar" >
-                    <a href="" > Home </a>
-                    <a href="" > Applications </a>
-                    <a href="" > website </a>
+                    <a href="http://localhost:3000/" > Home </a>
+                    <a href="http://mavetane.github.io" > Developer</a>
+                    <a href="http://thecodingground.com/" > website </a>
                 </div>
             </header>
         

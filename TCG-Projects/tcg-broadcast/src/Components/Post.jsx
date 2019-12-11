@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { fetchPosts } from '../actions/postActions';
 import PropTypes from 'prop-types';
 import Messages from '../Components/Messages'
-// import moment from 'moment'
+import moment from 'moment'
 
 
 class Post extends Component {
@@ -26,25 +26,32 @@ class Post extends Component {
     }
 
     render() {
-        const postItems = this.props.posts.map(post => (
-            <div key={post.uuid} className="Post-container">
-                <div className="Post-name">
-                    <h4><span class="glyphicon glyphicon-user"></span> {post.name}</h4>
-                </div>
-                <div className="Speech-bubble">
-                    {/* <label>{moment([post.date]).format("MMMM Do YYYY, h:mm:ss a")}</label> */}
-                    <label>Date: {post.date}</label>
-                    <p>"{post.message}"</p>
-                </div>
+        const postItems = this.props.posts
+        .map(post => ({...post, date: new Date(post.date)}))
+        .sort((a,b) => {
+            return b.date.getTime() - a.date.getTime() 
+        })
+        
+        console.log(postItems)
 
-            </div>
-        ));
         return (
             <div>
                 <div><Messages /></div>
                 <div className="Posts">
                     <h1 className="Posts-h1">Posts</h1>
-                    {postItems}
+                    {postItems.map(post => (
+            <div key={post.uuid} className="Post-container">
+                <div className="Post-name">
+                    <h4><span class="glyphicon glyphicon-user"></span> {post.name}</h4>
+                </div>
+                <div className="Speech-bubble">
+                    <label>{moment(post.date).format("MMMM Do YYYY, h:mm:ss a")}</label>
+                    
+                    <p>"{post.message}"</p>
+                </div>
+
+            </div>
+        ))}
                 </div>
             </div>
         );
