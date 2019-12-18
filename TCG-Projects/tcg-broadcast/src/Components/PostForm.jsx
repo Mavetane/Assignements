@@ -37,6 +37,14 @@ class PostForm extends Component {
     render() {
         return (
             <div className="Post-form">
+                <header className="Header" >
+                    <h1 > TCG Broadcast </h1>
+                    <div className="Nav-bar" >
+                        <a href="" > Home </a>
+                        <a href="" > Applications </a>
+                        <a href="" > website </a>
+                    </div>
+                </header>
                 <h1 className="Post-form-h1">Add Username</h1>
                 <form className="Form">
                     <span class="glyphicon glyphicon-user"></span>
@@ -48,11 +56,11 @@ class PostForm extends Component {
                             value={this.state.name} />
                     </div>
                     <br />
-                    
+
                     < Link onClick={() =>
                         this.onSubmit(this.state.name)}
                         className="Link"
-                         to='/Post'>LOG IN
+                        to='/Post'>LOG IN
                     </ Link>
 
                 </form>

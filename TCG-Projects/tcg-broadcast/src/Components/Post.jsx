@@ -40,7 +40,7 @@ class Post extends Component {
             </div>
         ));
         return (
-            <div>
+            <div className="Components">
                 <div><Messages /></div>
                 <div className="Posts">
                     <h1 className="Posts-h1">Posts</h1>

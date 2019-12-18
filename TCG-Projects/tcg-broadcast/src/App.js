@@ -10,14 +10,7 @@ function App() {
         <Router>
             <Switch>
         <div className="App" >
-            <header className="Header" >
-                <h1 > TCG Broadcast </h1>
-                <div className="Nav-bar" >
-                    <a href="" > Home </a>
-                    <a href="" > Applications </a>
-                    <a href="" > website </a>
-                </div>
-            </header>
+           
         
             <div>
                 <Route exact path="/" component={PostForm} /> 
