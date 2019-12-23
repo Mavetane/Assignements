@@ -37,6 +37,15 @@ class PostForm extends Component {
     render() {
         return (
             <div className="Post-form">
+                <header className="Header" >
+                <h1 > TCG Broadcast </h1>
+                <div className="Nav-bar" >
+                    <a href="http://localhost:3000/" > Home </a>
+                    <a href="http://mavetane.github.io" > Developer</a>
+                    <a href="http://thecodingground.com/" > website </a>
+                </div>
+            </header>
+        
                 <h1 className="Post-form-h1">Add Username</h1>
                 <form className="Form">
                     <span class="glyphicon glyphicon-user"></span>

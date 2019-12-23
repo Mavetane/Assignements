@@ -13,8 +13,8 @@ class Messages extends Component {
             max_char: 150
         }
     }
-     
-    componentWillMount(){
+
+    componentWillMount() {
         const displayName = this.props.loggedName
         return displayName
     }
@@ -43,24 +43,27 @@ class Messages extends Component {
     render() {
         return (
             <div className="Messages">
-                <div className="Log-name">
-                <a href="#" class="btn btn-info btn-lg">
-                <span class="glyphicon glyphicon-user"></span>  {this.props.loggedName} 
-                </a>
-                </div>
-                <form onSubmit={this.onSubmit}>
-                    <div className="Message">
-                        <textarea name="message" placeholder="'Enter your post'"
-                            maxLength="150"
-                            required
-                            type="text" onChange={this.onChange}
-                            value={this.state.message} />
-                        <p>{this.state.charsLeft}</p>
+                <div className="Messages-wrapper">
+                    <div className="Log-name">
+                        <a href="#" class="btn btn-info btn-lg">
+                            <span class="glyphicon glyphicon-user"></span>  {this.props.loggedName}
+                        </a>
                     </div>
-                    <br />
-                    <button type="submit" className="Button"><span class="glyphicon glyphicon-send"></span> Send</button>
-                </form>
-
+                    <div className="Form-wrapper">
+                    <form onSubmit={this.onSubmit}>
+                        <div className="Message">
+                            <textarea name="message" placeholder="'Enter your post'"
+                                maxLength="150"
+                                required
+                                type="text" onChange={this.onChange}
+                                value={this.state.message} />
+                            <p>{this.state.charsLeft}</p>
+                        </div>
+                        <br />
+                        <button type="submit" className="Button"><span class="glyphicon glyphicon-send"></span> Send</button>
+                    </form>
+                    </div>
+                </div>
             </div>
         );
     }

@@ -4,6 +4,7 @@ import { fetchPosts } from '../actions/postActions';
 import PropTypes from 'prop-types';
 import Messages from '../Components/Messages'
 import moment from 'moment'
+import TimeAgo from 'timeago-react'
 
 
 class Post extends Component {
@@ -35,7 +36,7 @@ class Post extends Component {
         console.log(postItems)
 
         return (
-            <div>
+            <div className="Components">
                 <div><Messages /></div>
                 <div className="Posts">
                     <h1 className="Posts-h1">Posts</h1>
@@ -45,7 +46,7 @@ class Post extends Component {
                     <h4><span class="glyphicon glyphicon-user"></span> {post.name}</h4>
                 </div>
                 <div className="Speech-bubble">
-                    <label>{moment(post.date).format("MMMM Do YYYY, h:mm:ss a")}</label>
+                    <label><TimeAgo date = {moment(post.date).format("MMMM Do YYYY, h:mm:ss a")}/></label>
                     
                     <p>"{post.message}"</p>
                 </div>
