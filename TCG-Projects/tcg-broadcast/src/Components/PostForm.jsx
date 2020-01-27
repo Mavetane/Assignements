@@ -65,6 +65,7 @@ class PostForm extends Component {
                     </ Link>
 
                 </form>
+                <h3 className="Footer">Collen's design</h3>
             </div>
         );
     }

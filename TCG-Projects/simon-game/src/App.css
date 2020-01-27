@@ -1,0 +1,11 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  margin-top: 20px;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(20px + 2vmin);
+  color: white;
+}

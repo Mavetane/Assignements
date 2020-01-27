@@ -228,3 +228,7 @@
     display: grid;
     grid-template-columns: auto auto;
 }
+.Footer {
+    color: white;
+    padding-top: 30vh;
+}
