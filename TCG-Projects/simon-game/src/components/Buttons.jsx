@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { audios } from '../audios/Audios';
-// import audios from 
+
 
 class Buttons extends Component {
     constructor(props) {
@@ -9,9 +9,12 @@ class Buttons extends Component {
             audios: audios,
             power: false,
             play: false,
-            counter: 0,
+            counter: 1,
             order: [],
-            playerOrder: [],
+            playerMoves: [],
+            computerMoves: [],
+            randomNumbers: []
+
 
 
         }
@@ -23,13 +26,16 @@ class Buttons extends Component {
     }
 
     handleSound = (sound) => {
-        if (this.state.power === true) {
-            if (this.state.play === true) {
+        let { playerMoves, power } = this.state
+        if (power) {
+            if (this.state.play) {
                 let audio = new Audio(sound.url)
+                playerMoves.push(sound.id)
+                console.log("PlayerOrder", playerMoves)  
                 return audio.play()
             }
             this.setState({
-                play: !this.state.play
+                play: !this.state.play,
             })
         } else {
             return null;
@@ -38,47 +44,50 @@ class Buttons extends Component {
     }
 
     handleStart = () => {
-        const { audios } = this.state
 
-        var i = 0;
-        // var nowPlaying;
-        // var play;
-       
-        // 
- 
-        // var audio = audios[i].url;
-        
-        var newAudios = JSON.parse(JSON.stringify(this.state.audios));
-        var interval = setInterval(() => {
-            var initial = i;
-            
-            audios[initial].color = "white";
-            
-            this.setState({ audios })
-            setTimeout(() => {
-                
-                // nowPlaying = play.play()
-                // console.log()
-                audios[initial].color = newAudios[initial].color;
-                for (var index in audios) {
-                    var audio = audios[index].url;
-                    console.log("audio", audio)
-                    // let playAudio = new Audio(audio)
-                    // play = playAudio
-                    // console.log("I'm audio url", play)
-                    // return playAudio.play()
+        const { audios, computerMoves, power } = this.state
+        if (power) {
+            let audio;
+            const {randomNumbers} = this.state
+            let numbers = Math.floor(Math.random()*4) +1;
+            randomNumbers.push(numbers)
+            console.log(randomNumbers)
+
+            var i = randomNumbers[0]
+            var newAudios = JSON.parse(JSON.stringify(this.state.audios));
+            var interval = setInterval(() => {
+                var initial = i;
+
+                audios[initial].color = "white";
+
+                this.setState({ audios })
+                setTimeout(() => {
+                    //comColor
+                    audios[initial].color = newAudios[initial].color;
+                    this.setState({ audios: newAudios });
+                    //comMoves
+                    //comSound
+                    audio = new Audio(audios[initial].url)
+                    audio.play()
+                    // console.log("I'm audio", audio)
+                }, 500);
+                if (initial === 3 ) {
+                    clearInterval(interval)
                 }
-                this.setState({ audios: newAudios });
-            }, 500);
-            if (initial == 3) {
-                clearInterval(interval)
-            }
-            i++;
-        }, 800);
+                i++;
+            }, 800);
+        }
+    }
+ 
+    onTest=()=> {
+        const {randomNumbers} = this.state
+        let numbers = Math.floor(Math.random()*4) +1;
+        randomNumbers.push(numbers)
+        console.log(randomNumbers)
     }
 
-
     render() {
+        const { power, counter } = this.state;
         return (
             <div className="Wrapper">
                 <div className="Container">
@@ -93,15 +102,19 @@ class Buttons extends Component {
                 <div className="Controls">
                     <h1>Controls</h1>
                     <div className="Power">
-                        <div className="Counter">{this.state.counter}</div>
-                        {this.state.power ? <label>OFF</label> : null}
+                        {power ? <div className="Counter">{counter}</div> : null}
+                        {power == false ? <label>Power: </label> : null}
+                        {power ? <label>OFF</label> : null}
                         <label className="Switch">
                             <input type="checkbox" onClick={() => this.togglePower()} />
                             <span className="Slider" ></span>
                         </label>
-                        {!this.state.power ? <label>ON</label> : null}
+                        {power ? <label>ON</label> : null}
+                        {power == false ? <label>ON</label> : null}
                         <br />
-                        <button onClick={() => this.handleStart()}>START!</button>
+                        {power ? <button onClick={() => this.handleStart()}>
+                            START!</button> : null}
+                            <button onClick={() => this.onTest()}>Test</button>
                     </div>
                 </div>
             </div>

@@ -7,7 +7,7 @@ export const audios = [{
 },
 {
     url: "https://s3.amazonaws.com/freecodecamp/simonSound2.mp3",
-    id: 2,
+    id: 4,
     color: 'red'  
 },
 {
@@ -17,7 +17,7 @@ export const audios = [{
 },
 {
     url: "https://s3.amazonaws.com/freecodecamp/simonSound4.mp3",
-    id: 4,
+    id: 2,
     color: 'orange'
     
 },]

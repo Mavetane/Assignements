@@ -9,9 +9,6 @@ class PostForm extends Component {
         super(props);
         this.state = {
             name: "",
-            // message: "",
-            // charsLeft: 150,
-            // max_char: 150
         }
         this.onChange = this.onChange.bind(this)
         this.onSubmit = this.onSubmit.bind(this)
