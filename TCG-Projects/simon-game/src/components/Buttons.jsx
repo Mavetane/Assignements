@@ -14,9 +14,6 @@ class Buttons extends Component {
             playerMoves: [],
             computerMoves: [],
             randomNumbers: []
-
-
-
         }
     }
     togglePower = () => {
@@ -31,7 +28,7 @@ class Buttons extends Component {
             if (this.state.play) {
                 let audio = new Audio(sound.url)
                 playerMoves.push(sound.id)
-                console.log("PlayerOrder", playerMoves)  
+                console.log("PlayerOrder", playerMoves)
                 return audio.play()
             }
             this.setState({
@@ -48,16 +45,16 @@ class Buttons extends Component {
         const { audios, computerMoves, power } = this.state
         if (power) {
             let audio;
-            const {randomNumbers} = this.state
-            let numbers = Math.floor(Math.random()*4) +1;
+            const { randomNumbers } = this.state
+            let numbers = Math.floor(Math.random() * 4) + 1;
             randomNumbers.push(numbers)
             console.log(randomNumbers)
 
-            var i = randomNumbers[0]
-            var newAudios = JSON.parse(JSON.stringify(this.state.audios));
-            var interval = setInterval(() => {
+            var newAudios = JSON.parse(JSON.stringify(audios));
+            var ts = randomNumbers.map(i =>{
+                  var interval = setInterval(() => {
                 var initial = i;
-
+console.log("I'm audios", audios[initial])
                 audios[initial].color = "white";
 
                 this.setState({ audios })
@@ -71,17 +68,21 @@ class Buttons extends Component {
                     audio.play()
                     // console.log("I'm audio", audio)
                 }, 500);
-                if (initial === 3 ) {
+                if (initial === 3) {
                     clearInterval(interval)
                 }
                 i++;
             }, 800);
+                
+                
+         } )
+
         }
     }
- 
-    onTest=()=> {
-        const {randomNumbers} = this.state
-        let numbers = Math.floor(Math.random()*4) +1;
+
+    onTest = () => {
+        const { randomNumbers } = this.state
+        let numbers = Math.floor(Math.random() * 4) + 1;
         randomNumbers.push(numbers)
         console.log(randomNumbers)
     }
@@ -114,7 +115,7 @@ class Buttons extends Component {
                         <br />
                         {power ? <button onClick={() => this.handleStart()}>
                             START!</button> : null}
-                            <button onClick={() => this.onTest()}>Test</button>
+                        <button onClick={() => this.onTest()}>Test</button>
                     </div>
                 </div>
             </div>
